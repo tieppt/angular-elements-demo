@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ce": {
+    "custom-elements": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,11 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ce",
+            "outputPath": "dist/custom-elements",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -48,7 +49,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ce:build"
+            "browserTarget": "custom-elements:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ce:build:production"
+              "browserTarget": "custom-elements:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ce:build"
+            "browserTarget": "custom-elements:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "ce-e2e": {
+    "custom-elements-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -111,7 +111,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ce:serve"
+            "devServerTarget": "custom-elements:serve"
           }
         },
         "lint": {
@@ -126,5 +126,5 @@
       }
     }
   },
-  "defaultProject": "ce"
+  "defaultProject": "custom-elements"
 }

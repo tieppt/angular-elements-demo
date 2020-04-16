@@ -1,6 +1,6 @@
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { MatSlideToggleModule } from '@angular/material';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
