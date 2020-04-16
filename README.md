@@ -5,3 +5,7 @@ Angular Elements are Angular components packaged as custom elements, a web stand
 ## Stack
 
 Angular 9 Ivy
+
+## Demo
+
+https://angular-elements-showcase.firebaseapp.com/
